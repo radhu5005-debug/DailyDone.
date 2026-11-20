@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DailyDone</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>DailyDone</h1>
+        <p>Your Personal Task Manager</p>
+    </header>
+
+    <main>
+
+        <h2>Welcome Back!</h2>
+        <button id="enableNotifications">
+    Enable Notifications
+</button>
+        <p>Let's make today productive.</p>
+
+        <section>
+            <h3>Add a New Task</h3>
+
+            <input type="text" id="taskInput"
+            placeholder="Enter your task">
+            <br><br>
+
+<label for="taskReminder">Set Reminder:</label>
+
+<input type="datetime-local" id="taskReminder">
+
+            <button id="addTask">Add Task</button>
+        </section>
+
+        <section>
+            <h3>My Tasks</h3>
+            <ul id="taskList"></ul>
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+<footer>
+    <p>Made with ♥ by Radha Sharma</p>
+</footer>
+</body>
+</html>
