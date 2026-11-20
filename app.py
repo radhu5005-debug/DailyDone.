@@ -1,7 +1,7 @@
 from flask import Flask, render_template,request,jsonify
 import sqlite3
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", static_url_path="/static")
 def create_table():
     conn = sqlite3.connect("tasks.db")
     cursor = conn.cursor()
